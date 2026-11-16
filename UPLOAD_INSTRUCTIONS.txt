@@ -1,0 +1,37 @@
+KARL COMETA — PORTFOLIO REFRESH (GitHub Pages)
+Prepared: 17 November 2026
+Public URL: https://karlcometa.github.io/KC-portfolio/
+Repository: https://github.com/karlcometa/KC-portfolio
+
+WHAT'S INCLUDED
+1. index.html — complete updated portfolio page, ready to replace existing root index.html
+2. Karl_Cometa_CV.pdf — updated, one-page CV to replace the existing root PDF
+
+IMPORTANT
+This is a PATCH PACKAGE for your existing GitHub repository, not a full copy of the repository. DO NOT delete existing files. The revised page uses your EXISTING style.css, script.js, and original root media assets.
+
+PUBLISH IN GITHUB (MANUAL STEP DUE TO READ-ONLY GITHUB CONNECTION)
+1. Sign in to GitHub in a browser that has write access to karlcometa/KC-portfolio.
+2. Open https://github.com/karlcometa/KC-portfolio
+3. Select 'Add file' → 'Upload files'. Upload index.html and Karl_Cometa_CV.pdf from this package into the repository root. Commit the changes to main.
+4. If GitHub won't replace an existing file through Upload files, open the repo in https://github.dev/karlcometa/KC-portfolio, replace the text of index.html with this file's content and save/commit; replace the CV through GitHub's upload interface.
+5. Open the public Pages site in a fresh/private browser tab. Verify images, gallery previews, CV download, video and mobile layout.
+
+WHAT CHANGED
+- Added 2026 Next Wave Marketing / Sidecar Chatter case study.
+- Added 2026 Wingman Group / Ray White Wetherill Park case study.
+- Updated PROHUB employment period and clarified team-campaign metrics.
+- Expanded AOP case study and clearly separated business sales/ad spend from verified ROAS.
+- Added recruiter evidence navigation and improved contact actions.
+- Corrected media paths to match files currently stored at the repository root.
+- Replaced the linked CV with your November 2026 updated CV.
+- Retained existing image assets, site stylesheet and JavaScript rather than introducing new dependencies.
+
+BEFORE SHARING WITH EMPLOYERS
+- Review screenshots for customer identities, private campaign records and employer confidential data. Assets in the repository are public.
+- Obtain approval before adding SaaS or Australian real estate clients' nonpublic dashboards and creative assets.
+- Verify all results against your original reports. PROHUB revenue/orders are SELECTED TEAM-CAMPAIGN totals, not personally-attributed revenue. AOP seven-day sales vs ad spend is NOT platform-attributed ROAS.
+- The workflow diagrams on the page are explicitly illustrative, NOT presented as proprietary client dashboards.
+
+ACCESS LIMITATION
+The connected GitHub tool reported pull=true, push=false for karlcometa/KC-portfolio on Nov 17 2026; no changes were published to GitHub or your live site through this package.

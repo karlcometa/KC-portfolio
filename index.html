@@ -3,76 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karl Cometa — Digital Marketing Portfolio</title>
-  <meta name="description" content="Revenue-focused digital marketing portfolio of Karl Cometa: e-commerce growth, Meta Ads support, creative strategy, lead generation, sales funnel systems, and AI-assisted workflows." />
-  <meta property="og:title" content="Karl Cometa — Digital Marketing Portfolio" />
-  <meta property="og:description" content="E-commerce growth, lead generation, social media management, creative strategy, sales systems, and AI-assisted marketing workflows." />
-  <meta property="og:image" content="assets/img/karl-ai-portrait.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#090909" />
+  <title>Karl Cometa | Performance Marketing, Meta Ads & Growth Operations</title>
+  <meta name="description" content="Performance marketing portfolio of Karl Cometa: Meta Ads, creative strategy, e-commerce campaigns, SaaS customer acquisition, real estate marketing, CRM follow-up and analytics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Karl Cometa | Performance Marketing Portfolio" />
+  <meta property="og:description" content="Case studies, creative samples, workflows and results across SaaS, e-commerce, Australian real estate and local lead generation." />
+  <meta property="og:image" content="https://karlcometa.github.io/KC-portfolio/karl-formal.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additions to the existing design system; no changes to style.css required. */
+    :root { color-scheme:dark; }
+    .hero h1{font-size:clamp(43px,6.5vw,76px);line-height:.99;letter-spacing:-.065em}
+    .hero-lead{max-width:760px}
+    .hero-visual .portrait{aspect-ratio:4/5}
+    .eyebrow .spark{flex:0 0 auto}
+    .metric-note{grid-column:1/-1;margin:12px 0 0;font-size:13px;line-height:1.65;color:#555}
+    .metric-card strong{font-size:clamp(28px,3.2vw,43px)}
+    .case-main h3{font-size:clamp(31px,3.5vw,48px)}
+    .case-columns{gap:22px}
+    .case-columns ul{list-style:none}
+    .work-visual{display:flex;flex-direction:column;gap:18px;justify-content:center;min-height:300px;padding:27px;background:linear-gradient(140deg,#171717,#0a0a0a)}
+    .work-visual .visual-title{color:#a9a9a9;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.2em}
+    .workflow-list{display:grid;gap:10px;margin-top:6px}
+    .workflow-step{border:1px solid #343434;background:#161616;padding:16px 18px;border-radius:18px;display:flex;gap:14px;align-items:center;line-height:1.4}
+    .workflow-step .step-num{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:12px;background:#f7f7f7;color:#111;font-size:12px;font-weight:900}
+    .workflow-step strong{font-size:14px}
+    .work-visual .proof-caption{font-size:12px;color:#a1a1a1;line-height:1.65;margin:0}
+    .case-tools{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+    .case-tools span{border:1px solid #343434;border-radius:999px;padding:7px 10px;font-size:11px;color:#bdbdbd;font-weight:700}
+    .case-clarity{border:1px solid #333;border-radius:14px;background:#0a0a0a;font-size:12px;line-height:1.55;color:#a7a7a7;margin:18px 0 0;padding:13px 15px}
+    .section-helper{font-size:13px;line-height:1.65;max-width:850px;color:#afafaf}
+    .proof-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .proof-card{border:1px solid #dadad5;background:#fff;border-radius:25px;padding:28px;display:flex;flex-direction:column;gap:15px}
+    .proof-card .proof-number{font-size:12px;font-weight:900;color:#777;letter-spacing:.19em}
+    .proof-card h3{font-size:25px;letter-spacing:-.055em;margin:0}
+    .proof-card p{font-size:14px;color:#555;line-height:1.65;flex:1;margin:0}
+    .proof-card a{color:#111;font-weight:800;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+    .proof-footnote{font-size:12px;line-height:1.8;color:#555;margin:26px 0 0;max-width:980px}
+    .capability-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .capability{border:1px solid #2c2c2c;background:#121212;border-radius:24px;padding:24px}
+    .capability h3{font-size:19px;margin:0 0 13px;letter-spacing:-.035em}
+    .capability p{font-size:13px;line-height:1.65;color:#b5b5b5;margin:0}
+    .mini-case .mini-badge{display:inline-block;padding:7px 11px;border-radius:999px;background:#efefed;color:#333;font-size:11px;font-weight:800;margin-bottom:15px}
+    .portrait-card .live-card span{max-width:156px}
+    .contact-meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;margin-top:30px;color:#a9a9a9;font-size:13px}
+    .contact-meta a{text-decoration:underline;text-underline-offset:4px}
+    .asset-note{word-break:normal}
+    .case-media .browser-frame img{object-fit:contain;background:#111}
+    .gallery-section .portfolio-grid{margin-top:20px}
+    .source-note{font-size:12px;color:#b6b6b6;line-height:1.7;margin-top:18px}
+    @media(max-width:1050px){.capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:980px){.proof-cards{grid-template-columns:1fr}.hero-visual{max-width:570px}}
+    @media(max-width:640px){.hero h1{font-size:clamp(41px,10.8vw,56px)}.capability-grid{grid-template-columns:1fr}.work-visual{padding:19px}.proof-card{padding:23px}.case-main h3{font-size:34px}}
+    @media(prefers-reduced-motion:reduce){.reveal,.reveal-group>*{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
+  </style>
 </head>
 <body>
-  <div class="noise"></div>
+  <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Karl Cometa home">
-      <span class="brand-mark">KC</span>
-      <span>Karl Cometa</span>
-    </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Karl Cometa home"><span class="brand-mark">KC</span><span>Karl Cometa</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#proof">Proof</a>
-      <a href="#featured">Case Studies</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#systems">Systems</a>
+      <a href="#proof">Results</a>
+      <a href="#featured">Case studies</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#gallery">Creative work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="header-cta" href="#contact">HIRE ME NOW</a>
+    <a class="header-cta" href="mailto:karlcometa.work@gmail.com?subject=Marketing%20Opportunity%20-%20Portfolio%20Inquiry">LET'S CONNECT</a>
   </header>
 
   <main id="home">
     <section class="hero section-pad">
-      <div class="hero-bg-orb orb-one"></div>
-      <div class="hero-bg-orb orb-two"></div>
+      <div class="hero-bg-orb orb-one" aria-hidden="true"></div><div class="hero-bg-orb orb-two" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="eyebrow pill"><span class="spark"></span> AI-assisted digital marketing portfolio</div>
-          <h1>Revenue-focused marketing execution for brands that want more inquiries, sales, and systems.</h1>
-          <p class="hero-lead">I help businesses turn attention into inquiries, and inquiries into sales through e-commerce marketing, Meta/Facebook Ads support, creative strategy, lead generation, sales funnel support, performance tracking, and AI-assisted workflows.</p>
+          <div class="eyebrow pill"><span class="spark" aria-hidden="true"></span> DIGITAL MARKETING · PAID ACQUISITION · OPERATIONS</div>
+          <h1>I connect campaigns, creatives and systems to business outcomes.</h1>
+          <p class="hero-lead">I'm Karl Cometa, a Philippines-based marketing specialist working across Meta Ads, creative strategy, conversion funnels, lead follow-up and performance reporting. My experience spans SaaS, e-commerce, Australian real estate and local service businesses.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">HIRE ME NOW <span>→</span></a>
-            <a class="btn btn-secondary" href="assets/docs/Karl_Cometa_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
-            <a class="btn btn-ghost" href="#featured">View Work</a>
+            <a class="btn btn-primary" href="#featured">VIEW CASE STUDIES <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="Karl_Cometa_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a class="btn btn-ghost" href="#evidence">See evidence</a>
           </div>
-          <div class="hero-tags" aria-label="Specialties">
-            <span>Digital Marketing Specialist</span>
-            <span>E-commerce Growth</span>
-            <span>Meta Ads Support</span>
-            <span>AI Workflows</span>
+          <div class="hero-tags" aria-label="Core skills">
+            <span>Meta Ads</span><span>Creative Testing</span><span>Lead Generation</span><span>Analytics & Reporting</span><span>AI-assisted Workflows</span>
           </div>
         </div>
-
-        <aside class="hero-visual reveal" aria-label="Karl Cometa portfolio visual">
+        <aside class="hero-visual reveal" aria-label="Portrait and marketing experience">
           <div class="portrait-card">
-            <img class="portrait" src="assets/img/karl-ai-portrait.webp" alt="Karl Cometa AI-styled portrait" />
+            <img class="portrait" src="karl-ai-portrait.webp" alt="Stylized portrait representing Karl Cometa" loading="eager" />
             <div class="portrait-overlay"></div>
-            <div class="live-card stat-card stat-top">
-              <strong>₱32.1M+</strong>
-              <span>Revenue tracked / supported</span>
-            </div>
-            <div class="live-card stat-card stat-bottom">
-              <strong>3.45x</strong>
-              <span>Blended ROAS</span>
-            </div>
+            <div class="live-card stat-card stat-top"><strong>100+</strong><span>Product campaigns supported</span></div>
+            <div class="live-card stat-card stat-bottom"><strong>4</strong><span>Marketing environments</span></div>
           </div>
-          <div class="profile-strip">
-            <img src="assets/img/karl-formal.webp" alt="Karl Cometa formal headshot" />
-            <div>
-              <b>Karl Cometa</b>
-              <span>Laguna, Philippines · Remote-ready</span>
-            </div>
-          </div>
+          <div class="profile-strip"><img src="karl-formal.webp" alt="Karl Cometa profile photograph" loading="lazy"/><div><b>Karl Cometa</b><span>Laguna, Philippines · Remote-ready</span></div></div>
         </aside>
       </div>
     </section>
@@ -80,334 +109,178 @@
     <section id="proof" class="proof-section section-pad light-section">
       <div class="container proof-grid">
         <div class="section-intro reveal">
-          <p class="section-label dark">Proof points</p>
-          <h2>Business impact, not just content output.</h2>
-          <p>Positioned for job applications, remote work, freelance projects, and client acquisition.</p>
+          <p class="section-label dark">SELECTED WORK RESULTS</p><h2>Outcomes with context.</h2>
+          <p>These figures summarize selected projects and reporting records, not isolated claims of personal attribution.</p>
         </div>
         <div class="metric-grid reveal-group">
-          <article class="metric-card"><strong>₱32.1M+</strong><span>E-commerce revenue tracked / supported</span></article>
-          <article class="metric-card"><strong>60K+</strong><span>Tracked orders across campaign records</span></article>
-          <article class="metric-card"><strong>₱7M+</strong><span>Ad spend monitored across trackers</span></article>
-          <article class="metric-card"><strong>3.45x</strong><span>Blended ROAS from tracked campaign data</span></article>
-          <article class="metric-card"><strong>200+</strong><span>Content posts created for local brands</span></article>
-          <article class="metric-card"><strong>₱350K+</strong><span>Seminar revenue supported</span></article>
+          <article class="metric-card"><strong>100+</strong><span>E-commerce product campaigns with creative/operations support</span></article>
+          <article class="metric-card"><strong>₱32.7M+</strong><span>Gross sales across selected supported e-commerce campaigns</span></article>
+          <article class="metric-card"><strong>60K+</strong><span>Orders recorded across selected e-commerce campaigns</span></article>
+          <article class="metric-card"><strong>13</strong><span>Office/agent account-platform entries covered by reporting</span></article>
+          <article class="metric-card"><strong>361</strong><span>AOP customer engagements logged Oct 27–Nov 6, 2026</span></article>
+          <article class="metric-card"><strong>30</strong><span>Qualified inquiries in that AOP reporting period</span></article>
         </div>
+        <p class="metric-note"><strong>Attribution:</strong> E-commerce revenue and orders were reported across selected team-supported campaigns, not individually generated by me. AOP engagements and qualified leads are CRM activity metrics, not closed sales. Results and source records are described in the case studies below.</p>
       </div>
     </section>
 
     <section id="skills" class="section-pad">
-      <div class="container split-grid">
-        <div class="section-intro reveal">
-          <p class="section-label">Capabilities</p>
-          <h2>Skills that connect marketing execution to revenue.</h2>
-          <p>I support businesses across strategy, content, creatives, ads support, sales conversations, tracking, reporting, and AI-assisted execution.</p>
-        </div>
-        <div class="skill-cloud reveal-group">
-          <span>Meta/Facebook Ads Support</span>
-          <span>E-commerce Marketing</span>
-          <span>Lead Generation</span>
-          <span>Social Media Management</span>
-          <span>Creative Strategy</span>
-          <span>Ad Angles & Hooks</span>
-          <span>Sales Funnel Support</span>
-          <span>Messenger Sales Scripts</span>
-          <span>Performance Tracking</span>
-          <span>AI-Assisted Marketing</span>
-          <span>Canva Graphics</span>
-          <span>CapCut Video Editing</span>
+      <div class="container">
+        <div class="section-intro narrow reveal"><p class="section-label">WHAT I WORK ON</p><h2>Marketing skills that work together.</h2><p>From the first ad impression to lead qualification, conversion measurement and an actionable weekly report.</p></div>
+        <div class="capability-grid reveal-group">
+          <article class="capability"><h3>Paid Acquisition</h3><p>Meta Ads Manager, audience and offer testing, creative angles, copy, lead-generation campaigns and ad-performance review.</p></article>
+          <article class="capability"><h3>Creative Strategy</h3><p>Canva design, CapCut edits, video hooks, direct-response messages and organic/social campaign content.</p></article>
+          <article class="capability"><h3>Funnels & CRM</h3><p>Landing page collaboration, Messenger lead qualification, follow-up flows, demo-booking journeys and lead tracking.</p></article>
+          <article class="capability"><h3>Reporting & AI</h3><p>GA4, PostHog, Meta Pixel/CAPI coordination, Google Sheets dashboards, ChatGPT and Claude-assisted research and workflows.</p></article>
         </div>
       </div>
     </section>
 
     <section id="featured" class="section-pad case-section">
       <div class="container">
-        <div class="section-intro narrow reveal">
-          <p class="section-label">Selected Work</p>
-          <h2>Featured case studies.</h2>
-          <p>Featured first: PROHUB, AOP Electronics Center, and Russ Juson — the strongest proof for e-commerce, lead generation, sales systems, executive support, and marketing operations.</p>
-        </div>
+        <div class="section-intro narrow reveal"><p class="section-label">SELECTED CASE STUDIES</p><h2>Recent work & documented projects.</h2><p>Each case explains the business problem, my contribution, and what can reasonably be measured. Confidential client data is not reproduced.</p></div>
 
         <article class="case-study reveal">
           <div class="case-main">
-            <div class="case-kicker"><span>01</span> Featured Case Study</div>
-            <div class="case-logo-wrap"><img src="assets/img/logo-prohub.webp" alt="PROHUB logo" /></div>
-            <h3>PROHUB E-commerce</h3>
-            <p class="case-subtitle">Product launch, campaign tracking & creative operations.</p>
-            <dl class="case-meta">
-              <div><dt>Role</dt><dd>E-commerce Marketing & Creative Operations Specialist / Marketing Lead</dd></div>
-              <div><dt>Period</dt><dd>Jan 2025 – Jul 2025</dd></div>
-              <div><dt>Business Type</dt><dd>E-commerce / direct-response product testing</dd></div>
-            </dl>
-            <div class="case-challenge">
-              <h4>Business challenge</h4>
-              <p>The business needed a structured way to test many products, organize creative assets, monitor campaign performance, identify winners, and prepare campaigns for scaling.</p>
-            </div>
+            <div class="case-kicker"><span>01</span> SAAS · CUSTOMER ACQUISITION</div>
+            <h3>Next Wave Marketing</h3>
+            <p class="case-subtitle">Meta Ads, landing-page journeys and subscription acquisition for Sidecar Chatter.</p>
+            <dl class="case-meta"><div><dt>Period</dt><dd>May–Oct 2026</dd></div><div><dt>My role</dt><dd>Digital Marketing & Growth Operations</dd></div><div><dt>Channels & systems</dt><dd>Meta Ads · Funnel support · Analytics · CRM/reporting</dd></div></dl>
+            <div class="case-challenge"><h4>Business challenge</h4><p>Link creative testing and paid social traffic to meaningful SaaS outcomes, including landing-page engagement, demo interest and subscriptions.</p></div>
             <div class="case-columns">
-              <div>
-                <h4>What I did</h4>
-                <ul>
-                  <li>Supported product launch workflows from research to creative strategy, testing, and scaling preparation.</li>
-                  <li>Organized product trackers, creative links, raw assets, campaign status, and testing progress.</li>
-                  <li>Supported campaign monitoring using sales, orders, ad spend, and ROAS data.</li>
-                  <li>Coordinated with product strategists, graphic artists, video editors, copywriters, and campaign teams.</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Key results</h4>
-                <div class="result-list">
-                  <span>₱32.1M+ revenue tracked/supported</span>
-                  <span>60K+ orders</span>
-                  <span>₱7M+ ad spend monitored</span>
-                  <span>300+ product entries tracked</span>
-                </div>
-              </div>
+              <div><h4>My contributions</h4><ul><li>Created ad concepts, messaging, campaign creative and video sales letter edits.</li><li>Supported page improvements and subscription/demo journeys.</li><li>Worked with developers to troubleshoot Meta Pixel/CAPI, GA4 and PostHog event tracking.</li><li>Reconciled campaign activity, follow-up and subscription funnel reporting.</li></ul></div>
+              <div><h4>What was produced</h4><div class="result-list"><span>Paid social campaign and creative testing</span><span>Landing-page & demo journey support</span><span>Event-measurement issue identification</span><span>Recurring campaign reporting</span></div></div>
             </div>
+            <p class="case-clarity">Performance screenshots and detailed subscription data are omitted pending client approval. This section documents responsibilities and deliverables, not an invented ROI claim.</p>
           </div>
-          <div class="case-media prohub-media">
-            <div class="browser-frame wide"><img src="assets/img/prohub-6.webp" alt="PROHUB logistics insights screenshot" /></div>
-            <div class="media-grid-three">
-              <button class="image-btn" data-img="assets/img/prohub-1.webp"><img src="assets/img/prohub-1.webp" alt="PROHUB product ad creative sample" /></button>
-              <button class="image-btn" data-img="assets/img/prohub-7.webp"><img src="assets/img/prohub-7.webp" alt="PROHUB ROAS table sample" /></button>
-              <button class="image-btn" data-img="assets/img/prohub-9.webp"><img src="assets/img/prohub-9.webp" alt="PROHUB product tracker sample" /></button>
-            </div>
-            <p class="asset-note">Tracker and performance screenshots are presented as proof of campaign operations support. Sensitive details should remain redacted before public publishing.</p>
+          <div class="work-visual">
+            <div class="visual-title">ILLUSTRATIVE WORKFLOW · NOT AN INTERNAL CLIENT DASHBOARD</div>
+            <div class="workflow-list"><div class="workflow-step"><span class="step-num">01</span><strong>Audience + offer + creative angles</strong></div><div class="workflow-step"><span class="step-num">02</span><strong>Meta campaigns + landing-page journey</strong></div><div class="workflow-step"><span class="step-num">03</span><strong>Lead/demo/subscription measurement</strong></div><div class="workflow-step"><span class="step-num">04</span><strong>Reporting + conversion improvements</strong></div></div>
+            <p class="proof-caption">Workflow reconstructed at a high level from the role. No proprietary documents, client dashboards or personal data are embedded.</p>
           </div>
         </article>
 
         <article class="case-study reverse reveal">
           <div class="case-main">
-            <div class="case-kicker"><span>02</span> Lead Generation + Sales Funnel</div>
-            <div class="case-logo-wrap"><img src="assets/img/logo-aop.webp" alt="AOP Electronics Center logo" /></div>
-            <h3>AOP Electronics Center</h3>
-            <p class="case-subtitle">Local e-bike battery lead generation & sales funnel support.</p>
-            <dl class="case-meta">
-              <div><dt>Role</dt><dd>Digital Marketing / Lead Generation Support</dd></div>
-              <div><dt>Period</dt><dd>2026 – Present</dd></div>
-              <div><dt>Business Type</dt><dd>Local e-bike battery shop with home service installation</dd></div>
-            </dl>
-            <div class="case-challenge">
-              <h4>Business challenge</h4>
-              <p>The business needed more qualified Messenger inquiries, stronger offer positioning, and a clearer sales follow-up system for local battery buyers.</p>
-            </div>
+            <div class="case-kicker"><span>02</span> AUSTRALIAN REAL ESTATE · SOCIAL + EMAIL</div>
+            <h3>Wingman Group</h3>
+            <p class="case-subtitle">Marketing administration for Ray White Wetherill Park.</p>
+            <dl class="case-meta"><div><dt>Period</dt><dd>Jun–Oct 2026</dd></div><div><dt>My role</dt><dd>Marketing Admin · Remote contractor</dd></div><div><dt>Market</dt><dd>Australian residential real estate</dd></div></dl>
+            <div class="case-challenge"><h4>Business challenge</h4><p>Keep property listings, agent promotion and marketing requests consistent while supporting a busy office with approvals, reporting and multiple channels.</p></div>
             <div class="case-columns">
-              <div>
-                <h4>What I did</h4>
-                <ul>
-                  <li>Created Facebook marketing angles for local e-bike battery buyers.</li>
-                  <li>Developed messaging around home service, free installation, COD, warranty, and shop credibility.</li>
-                  <li>Created objection-handling scripts for price, budget, location, and COD concerns.</li>
-                  <li>Supported sales, ad spend, inquiry, and performance tracking.</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Key results</h4>
-                <div class="result-list">
-                  <span>₱50K+ gross sales supported</span>
-                  <span>Facebook/Messenger lead generation</span>
-                  <span>CSR scripts and follow-up flow</span>
-                  <span>Local market offer positioning</span>
-                </div>
-              </div>
+              <div><h4>My contributions</h4><ul><li>Produced property, rental, auction and agent-branding content.</li><li>Prepared short-form social assets and email marketing collateral.</li><li>Coordinated posting requests, feedback and approvals.</li><li>Built AI-assisted social reporting across 13 office/agent account-platform entries.</li></ul></div>
+              <div><h4>Documented scope</h4><div class="result-list"><span>13 reporting account-platform entries</span><span>Weekly baseline and comparison reporting</span><span>Property & agent-branding creatives</span><span>Email and publishing coordination</span></div></div>
             </div>
+            <p class="case-clarity">The figure of 13 refers to reporting entries, not 13 unique clients or accounts. Actual campaign screenshots can be provided only where sharing is permitted.</p>
           </div>
-          <div class="case-media">
-            <div class="phone-video">
-              <video poster="assets/img/aop-video-poster.webp" muted loop playsinline controls>
-                <source src="assets/video/aop-video.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="media-grid-two">
-              <button class="image-btn" data-img="assets/img/aop-1.webp"><img src="assets/img/aop-1.webp" alt="AOP ad creative sample" /></button>
-              <button class="image-btn" data-img="assets/img/aop-page.webp"><img src="assets/img/aop-page.webp" alt="AOP Facebook page screenshot" /></button>
-            </div>
-          </div>
+          <div class="work-visual"><div class="visual-title">MARKETING OPERATIONS · REPRESENTATIVE PROCESS</div><div class="workflow-list"><div class="workflow-step"><span class="step-num">01</span><strong>Listing / agent content intake</strong></div><div class="workflow-step"><span class="step-num">02</span><strong>Creative and copy production</strong></div><div class="workflow-step"><span class="step-num">03</span><strong>Approval, scheduling and email support</strong></div><div class="workflow-step"><span class="step-num">04</span><strong>Performance review and data-quality checks</strong></div></div><p class="proof-caption">Representative workflow, not a screenshot of employer software.</p></div>
         </article>
 
         <article class="case-study reveal">
           <div class="case-main">
-            <div class="case-kicker"><span>03</span> Executive Support + Sales Operations</div>
-            <div class="case-logo-wrap"><img src="assets/img/logo-russ.webp" alt="Russ Juson brand image" /></div>
-            <h3>Transformational Coach Russ Juson</h3>
-            <p class="case-subtitle">Executive assistance, sales support & organizational development.</p>
-            <dl class="case-meta">
-              <div><dt>Role</dt><dd>Executive Assistant / Personal Assistant</dd></div>
-              <div><dt>Period</dt><dd>June 2024 – March 2025</dd></div>
-              <div><dt>Business Type</dt><dd>Personal brand / coaching / seminar business</dd></div>
-            </dl>
-            <div class="case-challenge">
-              <h4>Business challenge</h4>
-              <p>The business needed support across calendar management, seminar sales, follow-ups, team coordination, content execution, and internal workflow organization.</p>
-            </div>
+            <div class="case-kicker"><span>03</span> E-COMMERCE · CREATIVE OPERATIONS</div>
+            <div class="case-logo-wrap"><img src="logo-prohub.webp" alt="PROHUB E-commerce logo" loading="lazy" /></div>
+            <h3>PROHUB Ecommerce Solutions</h3>
+            <p class="case-subtitle">High-volume campaign creative production, product testing and performance tracking.</p>
+            <dl class="case-meta"><div><dt>Period</dt><dd>Jul 2025–Jan 2026</dd></div><div><dt>My role</dt><dd>E-commerce Marketing Lead & Creative Operations Specialist</dd></div><div><dt>Industries</dt><dd>Consumer products across multiple e-commerce categories</dd></div></dl>
+            <div class="case-challenge"><h4>Business challenge</h4><p>Coordinate a large pipeline of product launches, creative assets, testing records, and team communication so teams could identify winners and stop underperforming tests.</p></div>
             <div class="case-columns">
-              <div>
-                <h4>What I did</h4>
-                <ul>
-                  <li>Managed personal and social media calendars.</li>
-                  <li>Supported seminar sales, follow-ups, and business Messenger communication.</li>
-                  <li>Created workflows, SOPs, planning documents, and accountability tracking.</li>
-                  <li>Created graphics and edited videos using Canva and CapCut.</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Key results</h4>
-                <div class="result-list">
-                  <span>₱350K+ seminar revenue supported</span>
-                  <span>30+ participants supported</span>
-                  <span>₱15K–₱30K+ program value</span>
-                  <span>Workflow and team coordination support</span>
-                </div>
-              </div>
+              <div><h4>My contributions</h4><ul><li>Produced and coordinated creative assets for 100+ product campaigns.</li><li>Maintained product launch, campaign, status and funding trackers.</li><li>Reviewed ad spending, sales, orders and campaign trends in team records.</li><li>Coordinated across research, graphic design, video, copy and campaign execution.</li></ul></div>
+              <div><h4>Selected team-campaign records</h4><div class="result-list"><span>100+ product campaigns supported</span><span>₱32.7M+ selected campaign gross sales</span><span>60K+ recorded orders</span><span>Product, funding and performance trackers</span></div></div>
             </div>
+            <p class="case-clarity"><strong>Attribution note:</strong> Revenue and order totals reflect selected campaigns supported by multiple team members; they are not individual sales claims.</p>
           </div>
           <div class="case-media">
-            <div class="browser-frame"><img src="assets/img/russ-page.webp" alt="Russ Juson page screenshot" /></div>
+            <div class="browser-frame wide"><img src="prohub-6.webp" alt="PROHUB project operations screenshot" loading="lazy" /></div>
+            <div class="media-grid-three">
+              <button type="button" class="image-btn" data-img="prohub-1.webp" aria-label="Expand PROHUB creative sample"><img src="prohub-1.webp" alt="Product creative example" loading="lazy" /></button>
+              <button type="button" class="image-btn" data-img="prohub-7.webp" aria-label="Expand PROHUB campaign tracking screenshot"><img src="prohub-7.webp" alt="Campaign tracking screenshot" loading="lazy" /></button>
+              <button type="button" class="image-btn" data-img="prohub-9.webp" aria-label="Expand PROHUB product tracker"><img src="prohub-9.webp" alt="Product tracker screenshot" loading="lazy" /></button>
+            </div>
+            <p class="asset-note">Selected images already published in the existing portfolio. Review each screenshot for private information before forwarding.</p>
+          </div>
+        </article>
+
+        <article class="case-study reverse reveal">
+          <div class="case-main">
+            <div class="case-kicker"><span>04</span> LOCAL LEAD GENERATION · META ADS</div>
+            <div class="case-logo-wrap"><img src="logo-aop.webp" alt="AOP Electronics Center logo" loading="lazy" /></div>
+            <h3>AOP Electronics Center</h3>
+            <p class="case-subtitle">Local e-bike battery offers, Messenger inquiries, qualification and follow-up.</p>
+            <dl class="case-meta"><div><dt>Period</dt><dd>Part-time · Ongoing</dd></div><div><dt>My role</dt><dd>Digital Marketing & Growth Support</dd></div><div><dt>Market</dt><dd>Cabuyao, Santa Rosa and nearby Laguna service areas</dd></div></dl>
+            <div class="case-challenge"><h4>Business challenge</h4><p>Generate relevant local inquiries in a price-sensitive market, clarify service-area eligibility and improve follow-up without losing sight of actual sales.</p></div>
+            <div class="case-columns">
+              <div><h4>My contributions</h4><ul><li>Managed Meta campaign creative and local offer messaging.</li><li>Positioned home service, warranty and installation value.</li><li>Built Messenger qualification, objection-handling and follow-up scripts.</li><li>Worked with CSR records to separate qualified inquiries from low-fit leads.</li></ul></div>
+              <div><h4>Selected records</h4><div class="result-list"><span>361 engagements · Oct 27–Nov 6</span><span>30 qualified leads in that period</span><span>2 service reservations in the report</span><span>7-day period: ₱18,336 sales / ₱2,091 ad spend</span></div></div>
+            </div>
+            <p class="case-clarity"><strong>Measurement note:</strong> The seven-day sales and ad-spend numbers are contemporaneous business records, <em>not</em> verified ad-attributed ROAS. The Oct 27–Nov 6 report confirmed no new-inquiry sales, despite qualifying 30 leads.</p>
+          </div>
+          <div class="case-media">
+            <div class="phone-video"><video poster="aop-video-poster.webp" muted playsinline controls preload="metadata"><source src="aop-video.mp4" type="video/mp4" />Your browser does not support video.</video></div>
             <div class="media-grid-two">
-              <div class="video-tile">
-                <video poster="assets/img/russ-video-poster.webp" muted loop playsinline controls>
-                  <source src="assets/video/russ-video.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <button class="image-btn" data-img="assets/img/russ-workflow.webp"><img src="assets/img/russ-workflow.webp" alt="Russ Juson workflow or data screenshot" /></button>
+              <button type="button" class="image-btn" data-img="aop-1.webp" aria-label="Expand AOP ad creative"><img src="aop-1.webp" alt="AOP ad creative example" loading="lazy" /></button>
+              <button type="button" class="image-btn" data-img="aop-page.webp" aria-label="Expand AOP Facebook page screenshot"><img src="aop-page.webp" alt="AOP brand page screenshot" loading="lazy" /></button>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section-pad light-section">
+    <section id="evidence" class="section-pad light-section">
       <div class="container">
-        <div class="section-intro narrow reveal">
-          <p class="section-label dark">More client work</p>
-          <h2>Additional experience across local brands.</h2>
-          <p>Supporting proof across social media management, promo building, content production, and local audience positioning.</p>
+        <div class="section-intro narrow reveal"><p class="section-label dark">RECRUITER EVIDENCE</p><h2>See how I work—not only what I claim.</h2><p>Concrete creative examples, project artifacts and campaign-report excerpts help connect responsibilities to measurable work.</p></div>
+        <div class="proof-cards reveal-group">
+          <article class="proof-card"><span class="proof-number">01 / CREATIVE</span><h3>Ad & social creatives</h3><p>Product creatives, local service offers, resort social content and promotional campaign examples.</p><a href="#gallery">Browse creatives →</a></article>
+          <article class="proof-card"><span class="proof-number">02 / TRACKING</span><h3>Performance & trackers</h3><p>Selected PROHUB product and operations screenshots, alongside AOP campaign/CRM tracking materials already published.</p><a href="#featured">See campaign case studies →</a></article>
+          <article class="proof-card"><span class="proof-number">03 / OPERATIONS</span><h3>Funnel & CRM systems</h3><p>Examples of the steps I support: lead qualification, response flows, follow-up, reporting, review and optimization.</p><a href="#systems">See operations →</a></article>
         </div>
+        <p class="proof-footnote">Some recent projects are subject to client confidentiality. The workflow diagrams shown here are illustrative rather than screenshots of internal systems. Detailed client dashboards, ad account access and proprietary reports are not publicly shared without permission. Historical figures are included with attribution and period context to avoid confusing inquiry volume, business sales and platform-attributed ad conversions.</p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container"><div class="section-intro narrow reveal"><p class="section-label">ADDITIONAL WORK</p><h2>Content, operations & community-facing brands.</h2><p>Complementary experience in personal-brand support, tourism, retail and creative content.</p></div>
         <div class="mini-case-grid reveal-group">
-          <article class="mini-case">
-            <img src="assets/img/logo-enchanted.webp" alt="Enchanted Flower Shop logo" />
-            <h3>Enchanted Flower Shop</h3>
-            <p>Social Media Manager · Makati · June 2023 – June 2024</p>
-            <ul>
-              <li>200+ content posts</li>
-              <li>₱100K+ sales supported/generated</li>
-              <li>Page growth improved from around 20% to 60%</li>
-            </ul>
-          </article>
-          <article class="mini-case">
-            <img src="assets/img/logo-elpatio.webp" alt="El Patio Razon logo" />
-            <h3>El Patio Razon</h3>
-            <p>Social Media Manager · Tanay, Rizal · Oct 2023 – Feb 2025</p>
-            <ul>
-              <li>Up to around 75% page growth/engagement improvement</li>
-              <li>₱75 day tour promo support</li>
-              <li>Posters, tarpaulins, captions, and resort promos</li>
-            </ul>
-          </article>
-          <article class="mini-case">
-            <img src="assets/img/gym-3.webp" alt="Renz Fitness Gym sample creative" />
-            <h3>Local Gym Marketing</h3>
-            <p>Marketing Support / Content Creator · 2026</p>
-            <ul>
-              <li>Beginner-friendly positioning</li>
-              <li>Posters, Reels hooks, and page content</li>
-              <li>Walk-in tracking recommendations</li>
-            </ul>
-          </article>
+          <article class="mini-case"><img src="logo-russ.webp" alt="Russ Juson branding" loading="lazy"/><span class="mini-badge">MARKETING OPERATIONS</span><h3>Transformational Coach Russ Juson</h3><p>Executive support · Jun 2024–Mar 2025</p><ul><li>Calendar and communication follow-up</li><li>Content production support</li><li>Workflow organization and planning</li></ul></article>
+          <article class="mini-case"><img src="logo-elpatio.webp" alt="El Patio Razon logo" loading="lazy"/><span class="mini-badge">HOSPITALITY & SOCIAL</span><h3>El Patio Razon</h3><p>Social Media Manager · Oct 2023–Feb 2025</p><ul><li>Creative promotional content</li><li>Resort branding and offers</li><li>Social media publishing support</li></ul></article>
+          <article class="mini-case"><img src="logo-enchanted.webp" alt="Enchanted Flower Shop logo" loading="lazy"/><span class="mini-badge">LOCAL RETAIL</span><h3>Enchanted Flower Shop</h3><p>Social Media Manager · Jun 2023–Jun 2024</p><ul><li>Social content and seasonal campaigns</li><li>Promotional creative development</li><li>Local audience positioning</li></ul></article>
         </div>
       </div>
     </section>
 
     <section id="gallery" class="section-pad gallery-section">
-      <div class="container">
-        <div class="section-intro narrow reveal">
-          <p class="section-label">Creative Proof</p>
-          <h2>Selected creative samples.</h2>
-          <p>A curated gallery of ad creatives, social posts, hospitality promos, local business posters, and campaign visuals.</p>
-        </div>
-        <div class="gallery-filter reveal">
-          <button class="active" data-filter="all">All</button>
-          <button data-filter="ecommerce">E-commerce</button>
-          <button data-filter="local">Local Business</button>
-          <button data-filter="hospitality">Hospitality</button>
-          <button data-filter="fitness">Fitness</button>
-        </div>
+      <div class="container"><div class="section-intro narrow reveal"><p class="section-label">CREATIVE GALLERY</p><h2>Selected work samples.</h2><p>Click a sample for a closer view. The examples are from existing public portfolio assets.</p></div>
+        <div class="gallery-filter reveal"><button type="button" class="active" data-filter="all">All</button><button type="button" data-filter="ecommerce">E-commerce</button><button type="button" data-filter="local">Local business</button><button type="button" data-filter="hospitality">Hospitality</button><button type="button" data-filter="fitness">Fitness</button></div>
         <div class="portfolio-grid reveal-group">
-          <button class="portfolio-item tall" data-category="ecommerce" data-img="assets/img/aop-2.webp"><img src="assets/img/aop-2.webp" alt="AOP ad creative" /><span>AOP Ad Creative</span></button>
-          <button class="portfolio-item" data-category="ecommerce" data-img="assets/img/prohub-2.webp"><img src="assets/img/prohub-2.webp" alt="PROHUB ecommerce creative" /><span>PROHUB Product Creative</span></button>
-          <button class="portfolio-item" data-category="local" data-img="assets/img/enchanted-3.webp"><img src="assets/img/enchanted-3.webp" alt="Enchanted Flower Shop Mother's Day campaign" /><span>Mother’s Day Campaign</span></button>
-          <button class="portfolio-item wide" data-category="hospitality" data-img="assets/img/elpatio-1.webp"><img src="assets/img/elpatio-1.webp" alt="El Patio Razon cover photo" /><span>Resort Cover / Promo</span></button>
-          <button class="portfolio-item" data-category="fitness" data-img="assets/img/gym-1.webp"><img src="assets/img/gym-1.webp" alt="Gym pricing poster" /><span>Gym Pricing Poster</span></button>
-          <button class="portfolio-item" data-category="local" data-img="assets/img/enchanted-5.webp"><img src="assets/img/enchanted-5.webp" alt="Enchanted Flower Shop promo" /><span>Flower Shop Promo</span></button>
-          <button class="portfolio-item" data-category="hospitality" data-img="assets/img/elpatio-4.webp"><img src="assets/img/elpatio-4.webp" alt="El Patio Razon Hobbit house creative" /><span>Resort Offer Poster</span></button>
-          <button class="portfolio-item" data-category="fitness" data-img="assets/img/gym-5.webp"><img src="assets/img/gym-5.webp" alt="Gym leg day creative" /><span>Fitness Content</span></button>
-          <button class="portfolio-item wide" data-category="ecommerce" data-img="assets/img/prohub-5.webp"><img src="assets/img/prohub-5.webp" alt="PROHUB tracker dashboard" /><span>Campaign Tracker Proof</span></button>
+          <button type="button" class="portfolio-item tall" data-category="ecommerce" data-img="aop-2.webp"><img src="aop-2.webp" alt="AOP e-bike battery ad creative" loading="lazy"/><span>AOP Ad Creative</span></button>
+          <button type="button" class="portfolio-item" data-category="ecommerce" data-img="prohub-2.webp"><img src="prohub-2.webp" alt="Product ad creative" loading="lazy"/><span>Product Creative</span></button>
+          <button type="button" class="portfolio-item" data-category="local" data-img="enchanted-3.webp"><img src="enchanted-3.webp" alt="Flower shop campaign graphic" loading="lazy"/><span>Retail Campaign</span></button>
+          <button type="button" class="portfolio-item wide" data-category="hospitality" data-img="elpatio-1.webp"><img src="elpatio-1.webp" alt="El Patio Razon resort creative" loading="lazy"/><span>Resort Promotion</span></button>
+          <button type="button" class="portfolio-item" data-category="fitness" data-img="gym-1.webp"><img src="gym-1.webp" alt="Gym pricing promotional graphic" loading="lazy"/><span>Fitness Promo</span></button>
+          <button type="button" class="portfolio-item" data-category="local" data-img="enchanted-5.webp"><img src="enchanted-5.webp" alt="Flower shop promotional content" loading="lazy"/><span>Retail Content</span></button>
+          <button type="button" class="portfolio-item" data-category="hospitality" data-img="elpatio-4.webp"><img src="elpatio-4.webp" alt="Tourism promotional graphic" loading="lazy"/><span>Hospitality Offer</span></button>
+          <button type="button" class="portfolio-item" data-category="fitness" data-img="gym-5.webp"><img src="gym-5.webp" alt="Gym social media post" loading="lazy"/><span>Fitness Content</span></button>
+          <button type="button" class="portfolio-item wide" data-category="ecommerce" data-img="prohub-5.webp"><img src="prohub-5.webp" alt="PROHUB tracking screenshot" loading="lazy"/><span>Campaign Tracking</span></button>
         </div>
+        <p class="source-note">Creative ownership and performance attribution vary by campaign. Private client data should be redacted in any screenshot provided to recruiters.</p>
       </div>
     </section>
 
     <section id="systems" class="section-pad systems-section light-section">
-      <div class="container split-grid">
-        <div class="section-intro reveal">
-          <p class="section-label dark">Marketing systems</p>
-          <h2>Systems I can build or maintain.</h2>
-          <p>Businesses do not only need posts. They need systems that organize leads, campaigns, content, sales, tracking, and reporting.</p>
-        </div>
-        <div class="systems-grid reveal-group">
-          <article><span>01</span><b>Content Calendar</b></article>
-          <article><span>02</span><b>Lead Tracker</b></article>
-          <article><span>03</span><b>Sales Tracker</b></article>
-          <article><span>04</span><b>Ad Spend Tracker</b></article>
-          <article><span>05</span><b>Product Launch Tracker</b></article>
-          <article><span>06</span><b>CRM Tagging System</b></article>
-          <article><span>07</span><b>Weekly Performance Report</b></article>
-          <article><span>08</span><b>Creative Testing Tracker</b></article>
-        </div>
+      <div class="container split-grid"><div class="section-intro reveal"><p class="section-label dark">MARKETING SYSTEMS</p><h2>Repeatable execution over isolated tasks.</h2><p>These are the operating tools and workflows I have built, maintained or supported for campaigns and client teams.</p></div>
+        <div class="systems-grid reveal-group"><article><span>01</span><b>Content & approval tracker</b></article><article><span>02</span><b>Paid ad performance reporting</b></article><article><span>03</span><b>CRM and lead qualification</b></article><article><span>04</span><b>Messenger follow-up scripts</b></article><article><span>05</span><b>Campaign creative testing</b></article><article><span>06</span><b>Weekly growth review</b></article></div>
       </div>
     </section>
 
-    <section class="section-pad offer-section">
-      <div class="container offer-grid">
-        <article class="offer-card reveal">
-          <span class="icon-dot">✦</span>
-          <h3>Marketing Execution</h3>
-          <p>Content planning, creative briefs, captions, page improvement, offer positioning, and campaign preparation.</p>
-        </article>
-        <article class="offer-card inverse reveal">
-          <span class="icon-dot">✦</span>
-          <h3>Sales Support</h3>
-          <p>Messenger scripts, follow-up flows, objection handling, lead qualification, CRM tagging, and booked/completed tracking.</p>
-        </article>
-        <article class="offer-card reveal">
-          <span class="icon-dot">✦</span>
-          <h3>AI Workflows</h3>
-          <p>AI-assisted ideation, report drafting, workflow documentation, research summaries, and faster marketing execution.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section section-pad">
-      <div class="container contact-card reveal">
-        <p class="section-label">Contact</p>
-        <h2>Let’s build marketing that produces business results.</h2>
-        <p>Available for digital marketing, e-commerce marketing, lead generation, Meta Ads support, social media management, creative strategy, marketing operations, and remote work opportunities.</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:karlcometa.work@gmail.com">HIRE ME NOW</a>
-          <a class="btn btn-secondary" href="assets/docs/Karl_Cometa_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
-          <a class="btn btn-ghost" href="assets/docs/Karl_Cometa_Portfolio_PDF.pdf" target="_blank" rel="noreferrer">View PDF Portfolio</a>
-        </div>
-        <div class="contact-grid">
-          <a href="mailto:karlcometa.work@gmail.com"><span>Email</span><b>karlcometa.work@gmail.com</b></a>
-          <a href="tel:+639917459857"><span>Mobile</span><b>0991 745 9857</b></a>
-          <div><span>Location</span><b>Laguna, Philippines</b></div>
-        </div>
-      </div>
+    <section id="contact" class="section-pad">
+      <div class="container"><div class="contact-card reveal"><p class="section-label">LET'S TALK</p><h2>Looking for a marketer who connects execution with outcomes?</h2><p>Open to remote roles and selected projects involving paid acquisition, creative strategy, campaign reporting, marketing administration and growth operations.</p>
+        <div class="contact-actions"><a class="btn btn-primary" href="mailto:karlcometa.work@gmail.com?subject=Marketing%20Opportunity%20-%20Portfolio%20Inquiry">EMAIL ME <span aria-hidden="true">→</span></a><a class="btn btn-secondary" href="Karl_Cometa_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/iamkarlcometa/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+        <div class="contact-grid"><a href="mailto:karlcometa.work@gmail.com"><span>Work email</span><b>karlcometa.work@gmail.com</b></a><a href="https://www.linkedin.com/in/iamkarlcometa/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><b>/in/iamkarlcometa</b></a><div><span>Based in</span><b>Laguna, Philippines · Remote</b></div></div>
+        </div></div>
     </section>
   </main>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image preview">×</button>
-    <img src="" alt="Expanded portfolio asset" />
-  </div>
-
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded portfolio image"><button type="button" class="lightbox-close" aria-label="Close expanded image">×</button><img src="" alt="Enlarged portfolio work sample" /></div>
   <script src="script.js"></script>
 </body>
 </html>
